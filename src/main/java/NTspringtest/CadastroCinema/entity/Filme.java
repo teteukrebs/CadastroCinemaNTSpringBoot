@@ -3,6 +3,8 @@ package NTspringtest.CadastroCinema.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -23,4 +25,6 @@ public class Filme {
     private String tecnologia;
     private int poltronasDisponiveis;
 
+
 }
+

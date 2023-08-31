@@ -15,7 +15,12 @@ public class Ingresso {
     @Id
     private int id;
 
-    private int idFilme;
-    private int idUsuario;
+    @ManyToOne
+    @JoinColumn(name = "id_filme")
+    private Filme filme;
+
+    @ManyToOne
+    @JoinColumn(name = "id_usuario")
+    private Usuario usuario;
 
 }

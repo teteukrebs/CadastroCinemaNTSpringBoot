@@ -15,9 +15,12 @@ public class Acesso {
     @Id
     private int id;
 
-    private int idUsuario;
+    @OneToOne
+    @JoinColumn(name = "id_usuario")
+    private Usuario usuario;
+
     private String username;
     private String password;
 
-
 }
+
