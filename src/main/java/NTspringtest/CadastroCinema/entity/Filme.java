@@ -1,23 +1,19 @@
 package NTspringtest.CadastroCinema.entity;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.ManyToOne;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 
+import jakarta.persistence.*;
+import lombok.*;
 
-
-
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
 @Entity
-@Table(name = "filme")
+@Table(name = "FILME")
 public class Filme {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     private String titulo;
     private String genero;
@@ -27,5 +23,4 @@ public class Filme {
     private String tecnologia;
     private int poltronasDisponiveis;
 
-    // Getters and setters
 }
